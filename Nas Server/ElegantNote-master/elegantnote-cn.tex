@@ -3,7 +3,7 @@
 \title{Nas Server：个人云服务搭建过程}
 
 \author{郭翔宇}
-% \institute{Elegant\LaTeX{} Program}
+\institute{\LaTeX{} Program}
 
 \version{1.0}
 \date{\zhtoday}
@@ -17,10 +17,10 @@
 \maketitle
 
 \centerline{
-  \includegraphics[width=0.2\textwidth]{head.jpg}
+  \includegraphics[scale=0.2]{head.jpg}
 }
 
-
+\newpage
 \section{Nas Server 硬件设备}
 
 \begin{itemize}
@@ -58,12 +58,21 @@ OpenWrt 网络端口分配
 
 
 \subsubsection{问题总结} 
-1. 使用OpenWrt系统的过程中，当没有配置网口的通信方式时，直接插网口会导致一开始配置的网口出现问题
-2. 负载均衡中的源地址和目的地址理解性错误，源地址统指客户端即本地的pc端，目的地址为客户端要到达的地址
-3. 无法访问实验室服务器问题，在静态路由中添加路由表解决。
-4. DDNS配置问题，可以查看文件
 
-\href{run:./other_guide/openwrt_set_DDNS.pdf}{DDNS}
+\textbf{已解决问题}
+\begin{itemize}
+  \item 使用OpenWrt系统的过程中，当没有配置网口的通信方式时，直接插网口会导致一开始配置的网口出现问题
+  \item 负载均衡中的源地址和目的地址理解性错误，源地址统指客户端即本地的pc端，目的地址为客户端要到达的地址
+  \item 无法访问实验室服务器问题，在静态路由中添加路由表解决。
+  \item DDNS配置问题，可以查看文件\href{run:./other_guide/openwrt_set_DDNS.pdf}{DDNS}
+  \item 公网无法访问路由器下的Nas设备，解决功能通过防火请的端口转发功能。
+\end{itemize}
+
+\textbf{未解决问题}
+\begin{itemize}
+  \item Wifi情况下王者荣耀能够登录但是无法对战情况。
+  \item 
+\end{itemize}
 
 
 
